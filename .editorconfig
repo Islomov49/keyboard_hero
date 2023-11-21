@@ -1,0 +1,11 @@
+root = true
+
+[*.{kt,kts}]
+insert_final_newline = true
+ktlint_code_style = official
+ij_kotlin_allow_trailing_comma = true
+trailing-comma-on-declaration-site = true
+ij_kotlin_allow_trailing_comma_on_call_site = true
+trailing-comma-on-call-site = true
+max_line_length = off
+compose_allowed_composition_locals = LocalExtendedColors,LocalResources

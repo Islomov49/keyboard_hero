@@ -7,7 +7,7 @@ import uz.demo.keyboardhero.utils.base.BaseViewModel
 
 @Immutable
 data class HomeUIState(
-    val loading: Boolean = false
+    val loading: Boolean = false,
 )
 
 sealed interface HomeEvents

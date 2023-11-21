@@ -9,11 +9,11 @@ import uz.demo.keyboardhero.ui.theme.KColor
 @Composable
 fun KBackground(
     modifier: Modifier = Modifier,
-    content: @Composable () -> Unit
+    content: @Composable () -> Unit,
 ) {
     Surface(
         color = KColor.surface,
-        modifier = modifier.fillMaxSize()
+        modifier = modifier.fillMaxSize(),
     ) {
         content()
     }

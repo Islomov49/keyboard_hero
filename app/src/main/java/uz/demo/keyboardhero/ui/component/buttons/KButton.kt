@@ -40,7 +40,7 @@ fun KButton(
     onClick: () -> Unit = {},
     debounce: Boolean = true,
     preContent: @Composable RowScope.() -> Unit = {},
-    content: @Composable RowScope.() -> Unit = {}
+    content: @Composable RowScope.() -> Unit = {},
 ) {
     val multipleEventsCutter = remember(debounce) { MultipleEventsCutter.get(debounce) }
 
@@ -51,7 +51,7 @@ fun KButton(
             containerColor = buttonContainerColor,
             contentColor = buttonContentColor,
             disabledContainerColor = KColor.outline,
-            disabledContentColor = KColor.onSurfaceVariant
+            disabledContentColor = KColor.onSurfaceVariant,
         ),
         shape = RoundedCornerShape(12.dp),
         onClick = {
@@ -63,7 +63,7 @@ fun KButton(
         modifier = modifier
             .height(60.dp)
             .alpha(if (enabled) 1f else 0.5f),
-        elevation = ButtonDefaults.buttonElevation(defaultElevation = elevation)
+        elevation = ButtonDefaults.buttonElevation(defaultElevation = elevation),
     ) {
         preContent()
 
@@ -71,13 +71,13 @@ fun KButton(
             CircularProgressIndicator(
                 modifier = Modifier.size(20.dp),
                 color = buttonContentColor,
-                strokeWidth = 2.dp
+                strokeWidth = 2.dp,
             )
         } else {
             Text(
                 text = text,
                 fontWeight = FontWeight.Normal,
-                fontSize = 16.sp
+                fontSize = 16.sp,
             )
         }
 
@@ -94,7 +94,7 @@ fun PreviewNButton() {
                 KButton(
                     text = "Button",
                     modifier = Modifier.fillMaxWidth(),
-                    onClick = {}
+                    onClick = {},
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -103,7 +103,7 @@ fun PreviewNButton() {
                     text = "Button",
                     modifier = Modifier.fillMaxWidth(),
                     onClick = {},
-                    enabled = false
+                    enabled = false,
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -112,7 +112,7 @@ fun PreviewNButton() {
                     text = "Button",
                     modifier = Modifier.fillMaxWidth(),
                     onClick = {},
-                    loading = true
+                    loading = true,
                 )
 
                 Spacer(modifier = Modifier.height(16.dp))

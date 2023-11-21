@@ -17,7 +17,7 @@ import androidx.navigation.compose.composable
 fun NavGraphBuilder.composableWithScaleAlphaAnimation(
     route: String,
     arguments: List<NamedNavArgument> = emptyList(),
-    content: @Composable (NavBackStackEntry) -> Unit
+    content: @Composable (NavBackStackEntry) -> Unit,
 ) {
     val animationSpecEnter = tween<Float>(80)
     val animationSpecExit = tween<Float>(160)
@@ -29,30 +29,30 @@ fun NavGraphBuilder.composableWithScaleAlphaAnimation(
             fadeIn(animationSpec = animationSpecEnter, 0.5f) + scaleIn(
                 animationSpecEnter,
                 initialScale = 0.95f,
-                transformOrigin = TransformOrigin(0.5f, 0.55f)
+                transformOrigin = TransformOrigin(0.5f, 0.55f),
             )
         },
         exitTransition = {
             fadeOut(animationSpec = animationSpecExit, 0f) + scaleOut(
                 animationSpec = animationSpecExit,
                 targetScale = 1.05f,
-                transformOrigin = TransformOrigin(0.5f, 0.45f)
+                transformOrigin = TransformOrigin(0.5f, 0.45f),
             )
         },
         popEnterTransition = {
             fadeIn(animationSpec = animationSpecEnter, 0.5f) + scaleIn(
                 animationSpecEnter,
                 initialScale = 0.95f,
-                transformOrigin = TransformOrigin(0.5f, 0.55f)
+                transformOrigin = TransformOrigin(0.5f, 0.55f),
             )
         },
         popExitTransition = {
             fadeOut(animationSpec = animationSpecExit, 0f) + scaleOut(
                 animationSpec = animationSpecExit,
                 targetScale = 1.05f,
-                transformOrigin = TransformOrigin(0.5f, 0.45f)
+                transformOrigin = TransformOrigin(0.5f, 0.45f),
             )
-        }
+        },
     ) {
         content.invoke(it)
     }
@@ -61,13 +61,13 @@ fun NavGraphBuilder.composableWithScaleAlphaAnimation(
 fun NavGraphBuilder.composableWithoutAnimation(
     route: String,
     arguments: List<NamedNavArgument> = emptyList(),
-    content: @Composable (NavBackStackEntry) -> Unit
+    content: @Composable (NavBackStackEntry) -> Unit,
 ) {
     composable(
         route = route,
         arguments = arguments,
         enterTransition = { EnterTransition.None },
-        exitTransition = { ExitTransition.None }
+        exitTransition = { ExitTransition.None },
     ) {
         content.invoke(it)
     }

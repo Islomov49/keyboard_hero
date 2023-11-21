@@ -10,7 +10,7 @@ import uz.demo.keyboardhero.utils.base.BaseViewModel
 
 @Immutable
 data class RootViewUIState(
-    val loading: Boolean = true
+    val loading: Boolean = true,
 )
 
 class RootViewModel : BaseViewModel() {
@@ -19,7 +19,7 @@ class RootViewModel : BaseViewModel() {
     init {
         vmScope.launch {
             withTimeout(1000) {
-                // try to fetch main screen data
+                // hint: try to fetch main screen data here with timeout 1000 second
                 delay(10_000)
             }
         }.invokeOnCompletion {

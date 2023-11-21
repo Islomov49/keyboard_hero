@@ -9,7 +9,7 @@ val primaryContainerBrush
     @Composable @ReadOnlyComposable
     get() = Brush.verticalGradient(
         colors = listOf(
-            KColor.onPrimaryContainer,
-            KColor.onSecondaryContainer
-        )
+            KColor.onSurface,
+            KColor.onSurfaceVariant,
+        ),
     )

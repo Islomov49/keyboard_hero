@@ -25,7 +25,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -57,13 +57,13 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
     implementation("androidx.navigation:navigation-compose:2.7.5")
-    implementation("androidx.activity:activity-compose:1.8.0")
+    implementation("androidx.activity:activity-compose:1.8.1")
 
-    implementation("androidx.compose.ui:ui:1.6.0-beta01")
-    implementation("androidx.compose.ui:ui-graphics:1.6.0-beta01")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.6.0-beta01")
+    implementation("androidx.compose.ui:ui:1.6.0-alpha01")
+    implementation("androidx.compose.ui:ui-graphics:1.6.0-alpha01")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.6.0-alpha01")
     implementation("androidx.compose.material3:material3:1.2.0-alpha11")
-    implementation("androidx.compose.material:material:1.6.0-beta01")
+    implementation("androidx.compose.material:material:1.6.0-alpha01")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     implementation("androidx.core:core-splashscreen:1.1.0-alpha02")

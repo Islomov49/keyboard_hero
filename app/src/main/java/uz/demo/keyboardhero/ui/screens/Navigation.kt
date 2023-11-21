@@ -10,12 +10,16 @@ const val HomeScreenRoute = "HomeScreen_route"
 fun NavController.navigateToHomeScreen(navOptions: NavOptions? = null) {
     this.navigate(
         route = HomeScreenRoute,
-        navOptions = navOptions
+        navOptions = navOptions,
     )
 }
 
-fun NavGraphBuilder.homeScreenScreen() {
+fun NavGraphBuilder.homeScreenScreen(
+    openWindowsInsets: () -> Unit,
+) {
     composableWithScaleAlphaAnimation(route = HomeScreenRoute) {
-        HomeRoute()
+        HomeRoute(
+            openWindowsInsets = openWindowsInsets,
+        )
     }
 }

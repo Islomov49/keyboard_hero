@@ -1,69 +1,93 @@
 package uz.demo.keyboardhero.ui.theme
 
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
 
-// Just use such tool https://m3.material.io/theme-builder#/custom
+private val Grayscale0 = Color(0xFFFFFFFF)
+private val Grayscale3 = Color(0xFFF7F7F8)
+private val Grayscale5 = Color(0xFFF1F1F4)
+private val Grayscale10 = Color(0xFFE3E2E6)
+private val Grayscale20 = Color(0xFFD0CFD4)
+private val Grayscale80 = Color(0xFF34353D)
+private val Grayscale85 = Color(0xFF2A2B34)
+private val Grayscale90 = Color(0xFF1F2028)
+private val Grayscale95 = Color(0xFF151519)
+private val Grayscale97 = Color(0xFF0F1011)
+private val Grayscale100 = Color(0xFF000000)
 
-val md_theme_light_primary = Color(0xFF006B5D)
-val md_theme_light_onPrimary = Color(0xFFFFFFFF)
-val md_theme_light_primaryContainer = Color(0xFF59FBE0)
-val md_theme_light_onPrimaryContainer = Color(0xFF00201B)
-val md_theme_light_secondary = Color(0xFF006C47)
-val md_theme_light_onSecondary = Color(0xFFFFFFFF)
-val md_theme_light_secondaryContainer = Color(0xFF53FEB5)
-val md_theme_light_onSecondaryContainer = Color(0xFF002113)
-val md_theme_light_tertiary = Color(0xFF006876)
-val md_theme_light_onTertiary = Color(0xFFFFFFFF)
-val md_theme_light_tertiaryContainer = Color(0xFFA0EFFF)
-val md_theme_light_onTertiaryContainer = Color(0xFF001F25)
-val md_theme_light_error = Color(0xFFBA1A1A)
-val md_theme_light_errorContainer = Color(0xFFFFDAD6)
-val md_theme_light_onError = Color(0xFFFFFFFF)
-val md_theme_light_onErrorContainer = Color(0xFF410002)
-val md_theme_light_background = Color(0xFFFAFDFA)
-val md_theme_light_onBackground = Color(0xFF191C1B)
-val md_theme_light_surface = Color(0xFFFAFDFA)
-val md_theme_light_onSurface = Color(0xFF191C1B)
-val md_theme_light_surfaceVariant = Color(0xFFDAE5E1)
-val md_theme_light_onSurfaceVariant = Color(0xFF3F4946)
-val md_theme_light_outline = Color(0xFF6F7976)
-val md_theme_light_inverseOnSurface = Color(0xFFEFF1EF)
-val md_theme_light_inverseSurface = Color(0xFF2D3130)
-val md_theme_light_inversePrimary = Color(0xFF2EDEC4)
-val md_theme_light_shadow = Color(0xFF000000)
-val md_theme_light_surfaceTint = Color(0xFF006B5D)
-val md_theme_light_outlineVariant = Color(0xFFBEC9C5)
-val md_theme_light_scrim = Color(0xFF000000)
+private val Black60 = Color(0x990F1011)
+private val Black10 = Color(0x1A0F1011)
+private val Black5 = Color(0x0D0F1011)
+private val Black20 = Color(0x330F1011)
 
-val md_theme_dark_primary = Color(0xFF2EDEC4)
-val md_theme_dark_onPrimary = Color(0xFF003730)
-val md_theme_dark_primaryContainer = Color(0xFF005046)
-val md_theme_dark_onPrimaryContainer = Color(0xFF59FBE0)
-val md_theme_dark_secondary = Color(0xFF26E19B)
-val md_theme_dark_onSecondary = Color(0xFF003823)
-val md_theme_dark_secondaryContainer = Color(0xFF005235)
-val md_theme_dark_onSecondaryContainer = Color(0xFF53FEB5)
-val md_theme_dark_tertiary = Color(0xFF34D9F2)
-val md_theme_dark_onTertiary = Color(0xFF00363E)
-val md_theme_dark_tertiaryContainer = Color(0xFF004E59)
-val md_theme_dark_onTertiaryContainer = Color(0xFFA0EFFF)
-val md_theme_dark_error = Color(0xFFFFB4AB)
-val md_theme_dark_errorContainer = Color(0xFF93000A)
-val md_theme_dark_onError = Color(0xFF690005)
-val md_theme_dark_onErrorContainer = Color(0xFFFFDAD6)
-val md_theme_dark_background = Color(0xFF191C1B)
-val md_theme_dark_onBackground = Color(0xFFE0E3E1)
-val md_theme_dark_surface = Color(0xFF191C1B)
-val md_theme_dark_onSurface = Color(0xFFE0E3E1)
-val md_theme_dark_surfaceVariant = Color(0xFF3F4946)
-val md_theme_dark_onSurfaceVariant = Color(0xFFBEC9C5)
-val md_theme_dark_outline = Color(0xFF89938F)
-val md_theme_dark_inverseOnSurface = Color(0xFF191C1B)
-val md_theme_dark_inverseSurface = Color(0xFFE0E3E1)
-val md_theme_dark_inversePrimary = Color(0xFF006B5D)
-val md_theme_dark_shadow = Color(0xFF000000)
-val md_theme_dark_surfaceTint = Color(0xFF2EDEC4)
-val md_theme_dark_outlineVariant = Color(0xFF3F4946)
-val md_theme_dark_scrim = Color(0xFF000000)
+private val White60 = Color(0x99DCE6F0)
+private val White10 = Color(0x1ADCE6F0)
+private val White20 = Color(0x33DCE6F0)
+private val White5 = Color(0x0DDCE6F0)
 
-val seed = Color(0xFF03D0B7)
+private val CyanBlue = Color(0xFF3DC1CA)
+
+val KLightColorScheme = lightColorScheme(
+    primary = Color(0xFF07BD9C),
+    onPrimary = Grayscale0,
+    primaryContainer = Color(0xFFE6F8F5),
+    onPrimaryContainer = Color(0xFF01976E),
+    secondary = Color(0xFF1B98FF),
+    onSecondary = Grayscale0,
+    secondaryContainer = Color(0xFFE8F5FF),
+    onSecondaryContainer = Color(0xFF086AFF),
+    tertiary = Color(0xFFFF8311),
+    onTertiary = Grayscale0,
+    tertiaryContainer = Color(0xFFFFF3E7),
+    onTertiaryContainer = Color(0xFFFC8C25),
+    error = Color(0xFFFA1E25),
+    onError = Grayscale0,
+    errorContainer = Color(0xFFFFE9E9),
+    onErrorContainer = Color(0xFFFA1E25),
+    surfaceDim = Grayscale5,
+    background = Grayscale0,
+    surface = Grayscale0,
+    surfaceBright = Grayscale0,
+    surfaceContainerLowest = Grayscale0,
+    surfaceContainerLow = Grayscale3,
+    surfaceContainer = Grayscale5,
+    surfaceContainerHigh = Grayscale10,
+    surfaceContainerHighest = Grayscale20,
+    onSurface = Grayscale97,
+    onSurfaceVariant = Black60,
+    outline = Black20,
+    outlineVariant = Black5,
+)
+
+val KDarkColorScheme = darkColorScheme(
+    primary = Color(0xFF33F8D4),
+    onPrimary = Color(0xFF076857),
+    primaryContainer = Color(0xFF07BD9C),
+    onPrimaryContainer = Color(0xFFE6F8F5),
+    secondary = Color(0xFF8DCCFF),
+    onSecondary = Color(0xFF086AFF),
+    secondaryContainer = Color(0xFF1B98FF),
+    onSecondaryContainer = Color(0xFFE8F5FF),
+    tertiary = Color(0xFFFFC289),
+    onTertiary = Color(0xFFC25D00),
+    tertiaryContainer = Color(0xFFFF8311),
+    onTertiaryContainer = Color(0xFFFFF3E7),
+    error = Color(0xFFFFAFB1),
+    onError = Color(0xFFFA1E25),
+    errorContainer = Color(0xFFFA1E25),
+    onErrorContainer = Color(0xFFFFE9E9),
+    background = Grayscale97,
+    surfaceDim = Grayscale97,
+    surface = Grayscale97,
+    surfaceBright = Grayscale80,
+    surfaceContainerLowest = Grayscale100,
+    surfaceContainerLow = Grayscale95,
+    surfaceContainer = Grayscale90,
+    surfaceContainerHigh = Grayscale85,
+    surfaceContainerHighest = Grayscale80,
+    onSurface = Grayscale10,
+    onSurfaceVariant = White60,
+    outline = White20,
+    outlineVariant = White5,
+)

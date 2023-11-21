@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Keyboard Hero</string>
     <string name="windows_insets">Windows Insets</string>
+    <string name="average_form">Average Form</string>
+    <string name="stunning_form">Stunning Form</string>
+    <string name="windows_insets_advanced">Windows Insets Advanced</string>
+    <string name="keyboard_types">Keyboard Types</string>
+    <string name="focus_requester">Focus Requester</string>
+    <string name="bring_to_view">Bring To View</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id ante in justo congue convallis. Integer lorem felis, ultricies vel orci eget, fringilla scelerisque lorem. Ut ultricies vulputate urna quis mollis. Suspendisse potenti. Pellentesque nec diam ac mauris varius elementum a eu quam</string>
+    <string name="awesome_hint">Awesome hint</string>
 </resources>
