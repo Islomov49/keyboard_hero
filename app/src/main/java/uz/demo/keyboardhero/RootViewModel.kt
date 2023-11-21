@@ -10,7 +10,7 @@ import uz.demo.keyboardhero.utils.base.BaseViewModel
 
 @Immutable
 data class RootViewUIState(
-    val loading: Boolean = true,
+    val loading: Boolean = true
 )
 
 class RootViewModel : BaseViewModel() {

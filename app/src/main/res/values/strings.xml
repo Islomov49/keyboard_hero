@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Keyboard Hero</string>
+    <string name="windows_insets">Windows Insets</string>
 </resources>

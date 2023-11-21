@@ -5,14 +5,17 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
         mavenCentral()
+        mavenLocal()
+        jcenter()
+        google()
+        gradlePluginPortal()
     }
 }
 
 rootProject.name = "Keyboard Hero"
 include(":app")
- 

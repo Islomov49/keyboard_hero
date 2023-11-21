@@ -3,22 +3,20 @@ package uz.demo.keyboardhero
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.core.view.WindowCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
+import uz.demo.keyboardhero.ui.component.cover.KBackground
+import uz.demo.keyboardhero.ui.navigation.RootNavGraph
 import uz.demo.keyboardhero.ui.theme.KeyboardHeroTheme
 
 class RootActivity : ComponentActivity() {
@@ -27,7 +25,8 @@ class RootActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
-        WindowCompat.setDecorFitsSystemWindows(window, false)
+
+        enableEdgeToEdge()
 
         var uiState: RootViewUIState by mutableStateOf(RootViewUIState())
 
@@ -45,10 +44,8 @@ class RootActivity : ComponentActivity() {
 
         setContent {
             KeyboardHeroTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
-                ) {
-
+                KBackground {
+                    RootNavGraph()
                 }
             }
         }
