@@ -64,6 +64,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview:1.6.0-alpha01")
     implementation("androidx.compose.material3:material3:1.2.0-alpha11")
     implementation("androidx.compose.material:material:1.6.0-alpha01")
+    implementation("org.jetbrains.kotlinx:kotlinx-collections-immutable:0.3.5")
     implementation("androidx.lifecycle:lifecycle-runtime-compose:2.6.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     implementation("androidx.core:core-splashscreen:1.1.0-alpha02")

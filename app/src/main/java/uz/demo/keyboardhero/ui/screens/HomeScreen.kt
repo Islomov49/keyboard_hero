@@ -30,7 +30,10 @@ import uz.demo.keyboardhero.ui.theme.KeyboardHeroTheme
 
 @Composable
 fun HomeRoute(
-    openWindowsInsets: () -> Unit,
+    openWindowsInsetsFirstExample: () -> Unit,
+    openWindowsInsetsSecondExample: () -> Unit,
+    openWindowsInsetsThirdExample: () -> Unit,
+    openWindowsInsetsFourthExample: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel(),
 ) {
@@ -39,7 +42,10 @@ fun HomeRoute(
     HomeScreen(
         uiState = uiState,
         modifier = modifier,
-        openWindowsInsets = openWindowsInsets,
+        openWindowsInsetsFirstExample = openWindowsInsetsFirstExample,
+        openWindowsInsetsSecondExample = openWindowsInsetsSecondExample,
+        openWindowsInsetsThirdExample = openWindowsInsetsThirdExample,
+        openWindowsInsetsFourthExample = openWindowsInsetsFourthExample,
     )
 }
 
@@ -47,7 +53,10 @@ fun HomeRoute(
 fun HomeScreen(
     uiState: HomeUIState,
     modifier: Modifier = Modifier,
-    openWindowsInsets: () -> Unit = {},
+    openWindowsInsetsFirstExample: () -> Unit = {},
+    openWindowsInsetsSecondExample: () -> Unit = {},
+    openWindowsInsetsThirdExample: () -> Unit = {},
+    openWindowsInsetsFourthExample: () -> Unit = {},
 ) {
     Box(
         modifier = modifier
@@ -63,15 +72,32 @@ fun HomeScreen(
         ) {
             KButton(
                 modifier = Modifier.fillMaxWidth(),
-                text = stringResource(R.string.windows_insets),
-                onClick = openWindowsInsets,
+                text = stringResource(R.string.windows_insets_1_example),
+                onClick = openWindowsInsetsFirstExample,
             )
 
             Spacer(modifier = Modifier.height(16.dp))
 
             KButton(
                 modifier = Modifier.fillMaxWidth(),
-                text = stringResource(R.string.windows_insets_advanced),
+                text = stringResource(R.string.windows_insets_2_example),
+                onClick = openWindowsInsetsSecondExample,
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            KButton(
+                modifier = Modifier.fillMaxWidth(),
+                text = stringResource(R.string.windows_insets_3_example),
+                onClick = openWindowsInsetsThirdExample,
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+
+            KButton(
+                modifier = Modifier.fillMaxWidth(),
+                text = stringResource(R.string.windows_insets_4_example),
+                onClick = openWindowsInsetsThirdExample,
             )
 
             Spacer(modifier = Modifier.height(16.dp))

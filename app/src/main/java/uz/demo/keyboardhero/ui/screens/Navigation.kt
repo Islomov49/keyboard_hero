@@ -15,11 +15,17 @@ fun NavController.navigateToHomeScreen(navOptions: NavOptions? = null) {
 }
 
 fun NavGraphBuilder.homeScreenScreen(
-    openWindowsInsets: () -> Unit,
+    openWindowsInsetsFirstExample: () -> Unit,
+    openWindowsInsetsSecondExample: () -> Unit,
+    openWindowsInsetsThirdExample: () -> Unit,
+    openWindowsInsetsFourthExample: () -> Unit,
 ) {
     composableWithScaleAlphaAnimation(route = HomeScreenRoute) {
         HomeRoute(
-            openWindowsInsets = openWindowsInsets,
+            openWindowsInsetsFirstExample = openWindowsInsetsFirstExample,
+            openWindowsInsetsSecondExample = openWindowsInsetsSecondExample,
+            openWindowsInsetsThirdExample = openWindowsInsetsThirdExample,
+            openWindowsInsetsFourthExample = openWindowsInsetsFourthExample,
         )
     }
 }
