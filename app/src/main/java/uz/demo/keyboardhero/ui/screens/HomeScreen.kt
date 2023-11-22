@@ -10,7 +10,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.systemBars
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
@@ -34,6 +34,8 @@ fun HomeRoute(
     openWindowsInsetsSecondExample: () -> Unit,
     openWindowsInsetsThirdExample: () -> Unit,
     openWindowsInsetsFourthExample: () -> Unit,
+    openFocusFormExample: () -> Unit,
+    openBringToViewExample: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel(),
 ) {
@@ -46,6 +48,8 @@ fun HomeRoute(
         openWindowsInsetsSecondExample = openWindowsInsetsSecondExample,
         openWindowsInsetsThirdExample = openWindowsInsetsThirdExample,
         openWindowsInsetsFourthExample = openWindowsInsetsFourthExample,
+        openFocusFormExample = openFocusFormExample,
+        openBringToViewExample = openBringToViewExample,
     )
 }
 
@@ -57,13 +61,15 @@ fun HomeScreen(
     openWindowsInsetsSecondExample: () -> Unit = {},
     openWindowsInsetsThirdExample: () -> Unit = {},
     openWindowsInsetsFourthExample: () -> Unit = {},
+    openFocusFormExample: () -> Unit = {},
+    openBringToViewExample: () -> Unit = {},
 ) {
     Box(
         modifier = modifier
             .fillMaxSize()
             .background(KColor.surface)
             .padding(16.dp)
-            .windowInsetsPadding(WindowInsets.safeDrawing),
+            .windowInsetsPadding(WindowInsets.systemBars),
     ) {
         Column(
             modifier = Modifier
@@ -97,21 +103,15 @@ fun HomeScreen(
             KButton(
                 modifier = Modifier.fillMaxWidth(),
                 text = stringResource(R.string.windows_insets_4_example),
-                onClick = openWindowsInsetsThirdExample,
+                onClick = openWindowsInsetsFourthExample,
             )
 
             Spacer(modifier = Modifier.height(16.dp))
 
             KButton(
                 modifier = Modifier.fillMaxWidth(),
-                text = stringResource(R.string.keyboard_types),
-            )
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            KButton(
-                modifier = Modifier.fillMaxWidth(),
-                text = stringResource(R.string.focus_requester),
+                text = stringResource(R.string.focus_form),
+                onClick = openFocusFormExample,
             )
 
             Spacer(modifier = Modifier.height(16.dp))
@@ -119,6 +119,7 @@ fun HomeScreen(
             KButton(
                 modifier = Modifier.fillMaxWidth(),
                 text = stringResource(R.string.bring_to_view),
+                onClick = openBringToViewExample,
             )
 
             Spacer(modifier = Modifier.height(16.dp))

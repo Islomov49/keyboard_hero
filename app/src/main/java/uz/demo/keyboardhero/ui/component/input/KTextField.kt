@@ -34,6 +34,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -61,6 +62,7 @@ fun KTextField(
     singleLine: Boolean = true,
     fontSize: TextUnit = 16.sp,
     dynamicHint: Boolean = true,
+    visualTransformation: VisualTransformation = VisualTransformation.None,
     borderFocusedColor: Color = KColor.primary,
     cursorBrush: Brush = SolidColor(KColor.onSurface),
     onFocusChanged: (Boolean) -> Unit = {},
@@ -112,6 +114,7 @@ fun KTextField(
             },
         keyboardActions = keyboardActions,
         keyboardOptions = keyboardOptions,
+        visualTransformation = visualTransformation,
         singleLine = singleLine,
         textStyle = TextStyle(
             color = if (errorMessage.isEmpty()) {

@@ -6,6 +6,10 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import uz.demo.keyboardhero.ui.screens.HomeScreenRoute
+import uz.demo.keyboardhero.ui.screens.bringtoview.bringToViewScreen
+import uz.demo.keyboardhero.ui.screens.bringtoview.navigateToBringToView
+import uz.demo.keyboardhero.ui.screens.focus.focusFormScreen
+import uz.demo.keyboardhero.ui.screens.focus.navigateToFocusForm
 import uz.demo.keyboardhero.ui.screens.homeScreenScreen
 import uz.demo.keyboardhero.ui.screens.insets.centered.centeredAdjustNothingScreen
 import uz.demo.keyboardhero.ui.screens.insets.centered.navigateToCenteredAdjustNothing
@@ -34,11 +38,14 @@ fun RootNavGraph(
             openWindowsInsetsSecondExample = navController::navigateToNavigationWithoutGlitch,
             openWindowsInsetsThirdExample = navController::navigateToWindowInsetsCube,
             openWindowsInsetsFourthExample = navController::navigateToWindowInsetsChat,
+            openFocusFormExample = navController::navigateToFocusForm,
+            openBringToViewExample = navController::navigateToBringToView,
         )
 
         windowsInsetsScreen()
 
         windowInsetsCubeScreen()
+
         navigationWithoutGlitchScreen(
             openCenteredScreen = navController::navigateToCenteredAdjustNothing,
         )
@@ -46,5 +53,11 @@ fun RootNavGraph(
         windowInsetsChatScreen()
 
         centeredAdjustNothingScreen()
+
+        focusFormScreen()
+
+        bringToViewScreen(
+            onBack = navController::popBackStack,
+        )
     }
 }

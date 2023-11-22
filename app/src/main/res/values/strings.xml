@@ -7,11 +7,21 @@
     <string name="average_form">Average Form</string>
     <string name="stunning_form">Stunning Form</string>
     <string name="keyboard_types">Keyboard Types</string>
-    <string name="focus_requester">Focus Requester</string>
     <string name="bring_to_view">Bring To View</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id ante in justo congue convallis. Integer lorem felis, ultricies vel orci eget, fringilla scelerisque lorem. Ut ultricies vulputate urna quis mollis. Suspendisse potenti. Pellentesque nec diam ac mauris varius elementum a eu quam</string>
     <string name="awesome_hint">Awesome hint</string>
     <string name="windows_insets_awesome_example">Windows Insets Awesome Example</string>
     <string name="glitch_note">This Screen without IME Padding like Adjust Nothing, And you must not see any glitch while navigation</string>
     <string name="open_next_screen">Open Next Screen</string>
+    <string name="user_id">User Id</string>
+    <string name="invalid_user_id">Invalid User Id</string>
+    <string name="full_name">Full Name</string>
+    <string name="secret_word">Secret Word</string>
+    <string name="account_id">Account Id</string>
+    <string name="focus_form">Focus Form</string>
+    <string name="user_email">User Email</string>
+    <string name="user_agreement_form">User Agreement Form</string>
+    <string name="invalid_email_address">Invalid Email address</string>
+    <string name="submit">Submit</string>
+    <string name="i_agree"><![CDATA[I agree to the Terms & Conditions and the Privacy Policy]]></string>
 </resources>

@@ -19,6 +19,8 @@ fun NavGraphBuilder.homeScreenScreen(
     openWindowsInsetsSecondExample: () -> Unit,
     openWindowsInsetsThirdExample: () -> Unit,
     openWindowsInsetsFourthExample: () -> Unit,
+    openFocusFormExample: () -> Unit,
+    openBringToViewExample: () -> Unit,
 ) {
     composableWithScaleAlphaAnimation(route = HomeScreenRoute) {
         HomeRoute(
@@ -26,6 +28,8 @@ fun NavGraphBuilder.homeScreenScreen(
             openWindowsInsetsSecondExample = openWindowsInsetsSecondExample,
             openWindowsInsetsThirdExample = openWindowsInsetsThirdExample,
             openWindowsInsetsFourthExample = openWindowsInsetsFourthExample,
+            openFocusFormExample = openFocusFormExample,
+            openBringToViewExample = openBringToViewExample,
         )
     }
 }
