@@ -3,7 +3,6 @@ package uz.demo.keyboardhero.ui.screens
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,7 +10,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.systemBars
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
@@ -36,6 +34,7 @@ fun HomeRoute(
     openWindowsInsetsFourthExample: () -> Unit,
     openFocusFormExample: () -> Unit,
     openBringToViewExample: () -> Unit,
+    openBonusLayoutExample: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: HomeViewModel = viewModel(),
 ) {
@@ -50,6 +49,7 @@ fun HomeRoute(
         openWindowsInsetsFourthExample = openWindowsInsetsFourthExample,
         openFocusFormExample = openFocusFormExample,
         openBringToViewExample = openBringToViewExample,
+        openBonusLayoutExample = openBonusLayoutExample,
     )
 }
 
@@ -63,6 +63,7 @@ fun HomeScreen(
     openWindowsInsetsFourthExample: () -> Unit = {},
     openFocusFormExample: () -> Unit = {},
     openBringToViewExample: () -> Unit = {},
+    openBonusLayoutExample: () -> Unit = {},
 ) {
     Box(
         modifier = modifier
@@ -124,23 +125,13 @@ fun HomeScreen(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            Row(modifier = Modifier.fillMaxWidth()) {
-                KButton(
-                    modifier = Modifier.weight(1f),
-                    text = stringResource(R.string.average_form),
-                    containerColor = KColor.errorContainer,
-                    contentColor = KColor.onErrorContainer,
-                )
-
-                Spacer(modifier = Modifier.width(16.dp))
-
-                KButton(
-                    modifier = Modifier.weight(1f),
-                    text = stringResource(R.string.stunning_form),
-                    containerColor = KColor.secondaryContainer,
-                    contentColor = KColor.onSecondaryContainer,
-                )
-            }
+            KButton(
+                modifier = Modifier.fillMaxWidth(),
+                text = stringResource(R.string.bonus_layout),
+                containerColor = KColor.secondaryContainer,
+                contentColor = KColor.onSecondaryContainer,
+                onClick = openBonusLayoutExample,
+            )
         }
     }
 }

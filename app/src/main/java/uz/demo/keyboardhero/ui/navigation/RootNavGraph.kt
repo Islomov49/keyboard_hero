@@ -21,6 +21,8 @@ import uz.demo.keyboardhero.ui.screens.insets.navigateToWindowsInsets
 import uz.demo.keyboardhero.ui.screens.insets.navigation.navigateToNavigationWithoutGlitch
 import uz.demo.keyboardhero.ui.screens.insets.navigation.navigationWithoutGlitchScreen
 import uz.demo.keyboardhero.ui.screens.insets.windowsInsetsScreen
+import uz.demo.keyboardhero.ui.screens.layout.layoutScreen
+import uz.demo.keyboardhero.ui.screens.layout.navigateToLayout
 
 @Composable
 fun RootNavGraph(
@@ -40,6 +42,7 @@ fun RootNavGraph(
             openWindowsInsetsFourthExample = navController::navigateToWindowInsetsChat,
             openFocusFormExample = navController::navigateToFocusForm,
             openBringToViewExample = navController::navigateToBringToView,
+            openBonusLayoutExample = navController::navigateToLayout,
         )
 
         windowsInsetsScreen()
@@ -57,6 +60,10 @@ fun RootNavGraph(
         focusFormScreen()
 
         bringToViewScreen(
+            onBack = navController::popBackStack,
+        )
+
+        layoutScreen(
             onBack = navController::popBackStack,
         )
     }

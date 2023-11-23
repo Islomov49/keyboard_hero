@@ -24,4 +24,17 @@
     <string name="invalid_email_address">Invalid Email address</string>
     <string name="submit">Submit</string>
     <string name="i_agree"><![CDATA[I agree to the Terms & Conditions and the Privacy Policy]]></string>
+    <string name="bonus_layout">Bonus: Layout</string>
+    <string name="hide_password">Hide Password</string>
+    <string name="show_password">Show Password</string>
+    <string name="minimal_password_error">Password must be at least 6 symbols</string>
+    <string name="user_exists">User with this email exists</string>
+    <string name="email_description">You can only restore your account through this email. Make sure it is indeed your email.</string>
+    <string name="please_enter_your_full_name">Please enter your full name</string>
+    <string name="password">Password</string>
+    <string name="password_description">Please ensure that your password is strong and memorable.</string>
+    <string name="please_repeat_password">Please repeat password</string>
+    <string name="repeated_password_is_not_the_same">The repeated password does not match the original password. Please double-check for any typos.</string>
+    <string name="password_repeated_description">Please re-enter your original password to ensure there are no typos. In case you forget your password, we recover it by clearing all sensitive account data.</string>
+
 </resources>

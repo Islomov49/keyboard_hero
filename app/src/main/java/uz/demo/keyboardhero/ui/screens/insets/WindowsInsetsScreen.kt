@@ -1,15 +1,18 @@
-@file:OptIn(ExperimentalLayoutApi::class)
+@file:OptIn(ExperimentalFoundationApi::class)
 
 package uz.demo.keyboardhero.ui.screens.insets
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.windowInsetsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -33,6 +36,7 @@ import uz.demo.keyboardhero.ui.component.input.KTextField
 import uz.demo.keyboardhero.ui.theme.KColor
 import uz.demo.keyboardhero.ui.theme.KeyboardHeroTheme
 import uz.demo.keyboardhero.utils.fake.TextGenerator
+import uz.demo.keyboardhero.utils.insets.Screen
 
 @Composable
 fun WindowsInsetsRoute(
@@ -56,8 +60,8 @@ fun WindowsInsetsScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(KColor.surface),
-//            .windowInsetsPadding(WindowInsets.Screen),
+            .background(KColor.surface)
+            .windowInsetsPadding(WindowInsets.Screen),
     ) {
         Spacer(modifier = Modifier.height(8.dp))
 
@@ -75,7 +79,7 @@ fun WindowsInsetsScreen(
         Column(
             modifier = Modifier
                 .verticalScroll(rememberScrollState())
-//                .windowInsetsPadding(WindowInsets.safeDrawing)
+                .windowInsetsPadding(WindowInsets.safeDrawing)
                 .padding(16.dp)
                 .background(KColor.primaryContainer, shape = RoundedCornerShape(8.dp))
                 .padding(16.dp),

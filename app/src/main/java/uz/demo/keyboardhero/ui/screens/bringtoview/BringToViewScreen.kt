@@ -123,7 +123,7 @@ fun BringToViewScreen(
                     onValueChange = onEmailUpdate,
                     keyboardOptions = KeyboardOptions(
                         imeAction = ImeAction.Done,
-                        keyboardType = KeyboardType.Number,
+                        keyboardType = KeyboardType.Email,
                     ),
                 )
 

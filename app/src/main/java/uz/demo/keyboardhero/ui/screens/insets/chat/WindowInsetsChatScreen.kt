@@ -1,7 +1,12 @@
-@file:OptIn(ExperimentalLayoutApi::class, ExperimentalLayoutApi::class)
+@file:OptIn(
+    ExperimentalLayoutApi::class,
+    ExperimentalLayoutApi::class,
+    ExperimentalFoundationApi::class,
+)
 
 package uz.demo.keyboardhero.ui.screens.insets.chat
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box

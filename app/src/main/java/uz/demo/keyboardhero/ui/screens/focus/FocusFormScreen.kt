@@ -1,7 +1,12 @@
-@file:OptIn(ExperimentalComposeUiApi::class, ExperimentalLayoutApi::class)
+@file:OptIn(
+    ExperimentalComposeUiApi::class,
+    ExperimentalLayoutApi::class,
+    ExperimentalFoundationApi::class,
+)
 
 package uz.demo.keyboardhero.ui.screens.focus
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
