@@ -60,8 +60,7 @@ fun WindowsInsetsScreen(
     Column(
         modifier = modifier
             .fillMaxSize()
-            .background(KColor.surface)
-            .windowInsetsPadding(WindowInsets.Screen),
+            .background(KColor.surface),
     ) {
         Spacer(modifier = Modifier.height(8.dp))
 
@@ -79,7 +78,6 @@ fun WindowsInsetsScreen(
         Column(
             modifier = Modifier
                 .verticalScroll(rememberScrollState())
-                .windowInsetsPadding(WindowInsets.safeDrawing)
                 .padding(16.dp)
                 .background(KColor.primaryContainer, shape = RoundedCornerShape(8.dp))
                 .padding(16.dp),

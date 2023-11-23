@@ -26,8 +26,6 @@ class RootActivity : ComponentActivity() {
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
 
-        enableEdgeToEdge()
-
         var uiState: RootViewUIState by mutableStateOf(RootViewUIState())
 
         lifecycleScope.launch {
